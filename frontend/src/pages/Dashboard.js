@@ -19,6 +19,7 @@ export default function Dashboard() {
   useEffect(() => {
     if (!token) { navigate('/login'); return; }
     fetchTasks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchTasks = async () => {
